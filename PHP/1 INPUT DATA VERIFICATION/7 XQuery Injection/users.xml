@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<userlist>
+<user category="group1">
+  <uname>jpublic</uname>
+  <fname>john</fname>
+  <lname>public</lname>
+  <status>good</status>
+</user>
+<user category="admin">
+  <uname>jdoe</uname>
+  <fname>john</fname>
+  <lname>doe</lname>
+  <status>good</status>
+</user>
+<user category="group2">
+  <uname>mjane</uname>
+  <fname>mary</fname>
+  <lname>jane</lname>
+  <status>good</status>
+</user>
+<user category="group1">
+  <uname>anormal</uname>
+  <fname>abby</fname>
+  <lname>normal</lname>
+  <status>revoked</status>
+</user>
+</userlist>
