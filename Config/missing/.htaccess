@@ -1,4 +1,0 @@
-DirectoryIndex index.php
-<Directory /home/mypath>
-#ErrorDocument 400 default
-</Directory>
