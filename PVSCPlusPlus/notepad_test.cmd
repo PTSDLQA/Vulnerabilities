@@ -1,1 +1,0 @@
-"C:\Program Files (x86)\PVS-Studio\PVS-Studio_Cmd.exe" -t ".\notepadPlus\PowerEditor\visual.net\notepadPlus.sln" -p "x64" -c "Debug"
