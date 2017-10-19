@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" version="2.5">
+    <servlet>
+        <servlet-name>comingsoon</servlet-name>
+        <servlet-class>mysite.server.ComingSoonServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>comingsoon</servlet-name>
+        <url-pattern>/*</url-pattern>
+    </servlet-mapping>
+	<error-page>
+        <location>/general-error.html</location>
+    </error-page>
+	<security-constraint>
+		<web-resource-collection>
+			<http-method>GET</http-method>
+		</web-resource-collection>
+        <user-data-constraint>
+            <transport-guarantee></transport-guarantee>
+        </user-data-constraint>
+	</security-constraint>
+	<session-config>
+		<tracking-mode>URL</tracking-mode>
+		<session-timeout>16</session-timeout>
+		<cookie-config>
+			<http-only>false</http-only>
+			<secure>false</secure>
+		</cookie-config>
+	</session-config>
+	<servlet>
+        <servlet-name>comingsoon</servlet-name>
+        <servlet-class>mysite.server.ComingSoonServlet</servlet-class>
+		<init-param>
+			<param-name>debug</param-name>
+			<param-value>true</param-value>
+		</init-param>
+    </servlet>
+    <error-page>
+        <location>/WEB-INF/jsp/ErrorPage.jsp</location>
+    </error-page>
+</web-app>
