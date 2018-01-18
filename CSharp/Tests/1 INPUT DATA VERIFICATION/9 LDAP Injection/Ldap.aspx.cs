@@ -25,8 +25,11 @@ namespace Mopas.Tests
 			
 
             // this is our vulnerabilitiy of LDAP injection *in this file*
-            var ds = new DirectorySearcher(domain.GetDirectoryEntry(), filter);
+            var ds = new DirectorySearcher(domain.GetDirectoryEntry());
 
+            // VERIFY: AI issue #670, High, LDAP, http://omachalov.ptsecurity.ru/#/taskResults/1214
+            // GET /Tests/1%20INPUT%20DATA%20VERIFICATION/9%20LDAP%20Injection/Ldap.aspx.cs?address=* HTTP/1.1
+            // Host: localhost
             using (var src = ds.FindAll())
             {
                 foreach (var res in src)
