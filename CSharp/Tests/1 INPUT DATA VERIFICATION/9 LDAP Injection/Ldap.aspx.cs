@@ -17,7 +17,7 @@ namespace Mopas.Tests
             var domain = Domain.GetDomain(dc);	
 
             // this is our vulnerabilitiy of LDAP injection *in this file*
-            var ds = new DirectorySearcher(domain.GetDirectoryEntry());
+            var ds = new DirectorySearcher(domain.GetDirectoryEntry(), filter);
 
             using (var src = ds.FindAll())
             {
@@ -35,15 +35,15 @@ namespace Mopas.Tests
 
             // this is our second vulnerability of XSS in this file
             // we will demonstrate what happen if developer fails with his fix (VERIFY Marker)
-            Response.Write("name");
+            Response.Write(name);
 
             // this is our third vulnerability of XSS in this file
             // we will demonstrate what happen if we really fix vulnerability (VERIFY Marker)
-            Response.Write("name");
+            Response.Write(name);
 
             // this is our fourth vulnerability of XSS in this file
             // we will demonstrate what happen if developer want to cheat (FIXED Marker)
-            Response.Write("name");
+            Response.Write(name);
         }
     }
 }
